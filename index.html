@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Home Interface</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+    <header>
+      <h1>Smart Home Control</h1>
+    </header>
+
+    <main>
+      <section id="lighting">
+        <h2><i class="fas fa-lightbulb"></i> Lighting</h2>
+        <label class="switch">
+          <input type="checkbox" id="lightToggle" onchange="toggleLights()" />
+          <span class="slider round"></span>
+        </label>
+        <button onclick="dimLights()"><i class="fas fa-adjust"></i> Dim</button>
+      </section>
+
+      <section id="temperature">
+        <h2><i class="fas fa-thermometer-half"></i> Temperature</h2>
+        <div id="tempDisplay">20°C</div>
+        <button onclick="increaseTemp()">
+          <i class="fas fa-plus"></i> Increase
+        </button>
+        <button onclick="decreaseTemp()">
+          <i class="fas fa-minus"></i> Decrease
+        </button>
+        <button onclick="setTemp()">
+          <i class="fas fa-thermometer"></i> Set Temperature
+        </button>
+      </section>
+
+      <section id="music">
+        <h2><i class="fas fa-music"></i> Music</h2>
+        <div id="songDisplay">No song playing</div>
+        <button onclick="playMusic()"><i class="fas fa-play"></i> Play</button>
+        <button onclick="pauseMusic()">
+          <i class="fas fa-pause"></i> Pause
+        </button>
+        <button onclick="stopMusic()"><i class="fas fa-stop"></i> Stop</button>
+        <button onclick="nextTrack()">
+          <i class="fas fa-forward"></i> Next Track
+        </button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

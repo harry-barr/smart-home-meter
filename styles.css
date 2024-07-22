@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #28074a, #491088);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #6c1dd0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #ff19db;
+}
+
+main {
+  width: 90%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+section {
+  background-color: #28074a;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+section h2 i {
+  margin-right: 10px;
+  color: #ff19db;
+}
+
+button {
+  background: linear-gradient(135deg, #bd4de5, #ff7f1a);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+button i {
+  margin-right: 8px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff7f1a, #bd4de5);
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-bottom: 15px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #bd4de5;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff7f1a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Temperature Display */
+#tempDisplay {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ff19db;
+}
+
+/* Song Display */
+#songDisplay {
+  font-size: 24px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ff19db;
+}
+
+/* Button Glow Effect */
+button:active {
+  box-shadow: 0 0 20px rgba(255, 127, 26, 0.8), 0 0 40px rgba(255, 127, 26, 0.8),
+    0 0 60px rgba(255, 127, 26, 0.8);
+}
+
+button.glow {
+  box-shadow: 0 0 20px rgba(255, 127, 26, 0.8), 0 0 40px rgba(255, 127, 26, 0.8),
+    0 0 60px rgba(255, 127, 26, 0.8);
+  transition: box-shadow 0.3s ease;
+}
